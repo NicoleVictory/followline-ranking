@@ -10,8 +10,6 @@ def record_time(name, run, time):
         for i, (name, time) in enumerate(ranking):
             if time == '':
                 ranking_file.write(f"{i+1}. {name}: Falhou em completar todas as tentativas\n")
-            elif time == 'fail':
-                ranking_file.write(f"{i+1}. {name}: Não completou uma das tentativas\n")
             else:
                 ranking_file.write(f"{i+1}. {name}: {time:.2f}\n")
 
